@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Trả lời câu hỏi sau:</p>
+    <p>“What is the “official” name of JavaScript?”</p>
+    <p>Câu trả lời:</p>
+    <input type="text" id="answer">
+    <button type="button" onclick="fun_answer()">Kiểm tra</button>
+    <p id="dapan">Đáp án:</p>
+</body>
+
+</html>
+<script>
+    
+    function fun_answer() {
+        let input = document.getElementById("answer").value;
+
+        if (input == "ECMAScript") {
+            document.getElementById("dapan").innerText = "Đáp án: " + "Right!";
+        }
+        else {
+            document.getElementById("dapan").innerText = "Đáp án: " + "Didn’t know? ECMAScript!";
+        }
+    }
+</script>
