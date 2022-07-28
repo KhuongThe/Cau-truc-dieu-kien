@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Tính điểm đại học</h3>
+    <p>Điểm Môn Toán</p>
+    <input type="text" id="number1">
+    <p>Điểm Môn Văn</p>
+    <input type="text" id="number2">
+    <p>Điểm Môn Anh</p>
+    <input type="text" id="number3">
+    <p>Khu vực</p>
+    <select name="" id="number4">
+        <option value="kv1">KV1</option>
+        <option value="kv2-nt">KV2-NT</option>
+        <option value="kv2">KV2</option>
+        <option value="kv3">KV3</option>
+    </select>
+    <br>
+    <br>
+    <button type="button" onclick="calculation()">Tính điểm</button>
+    <br>
+    <p id="total">Tổng điểm đại học khối D của bạn là:</p>
+</body>
+<script>
+    debugger;
+    function calculation() {
+        let number1 = +document.getElementById("number1").value;
+        let number2 = +document.getElementById("number2").value;
+        let number3 = +document.getElementById("number3").value;
+        let number4 = document.getElementById("number4").value;
+        switch (number4) {
+            case "kv1":
+                number4 = 0.75;
+                break;
+            case "kv2-nt":
+                number4 = 0.5;
+                break;
+            case "kv2":
+                number4 = 0.25;
+                break;
+            case "kv3":
+                number4 = 0;
+                break;
+        }
+        let total = number1 + number2 + number3 + number4;
+        document.getElementById("total").innerText = "Tổng điểm đại học khối D của bạn là: " + total;
+    }
+</script>
+
+</html>

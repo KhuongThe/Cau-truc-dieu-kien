@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Tính năm Âm lịch</h2>
+    <p>Nhập vào năm sinh dương lịch</p>
+    <input type="text" id="calendar">
+    <br>
+    <br>
+    <button type="button" onclick="lunar_year()">Theo Âm lịch</button>
+    <br>
+    <h2 id="result">Tính theo Âm lịch là năm:</h2>
+</body>
+<script>
+    function lunar_year() {
+        let year = +document.getElementById("calendar").value;
+        let can = year % 10;
+        let chi = year % 12;
+        
+        switch (can) {
+            case 0:
+                can = "Canh";
+                break;
+            case 1:
+                can = "Tân";
+                break;
+            case 2:
+                can = "Nhâm";
+                break;
+            case 3:
+                can = "Quý";
+                break;
+            case 4:
+                can = "Giáp";
+                break;
+            case 5:
+                can = "Ất";
+                break;
+            case 6:
+                can = "Bính";
+                break;
+            case 7:
+                can = "Đinh";
+                break;
+            case 8:
+                can = "Mậu";
+                break;
+            case 9:
+                can = "Kỷ";
+                break;
+        }
+        switch (chi) {
+            case 0:
+                chi = "Thân";
+                break;
+            case 1:
+                chi = "Dậu";
+                break;
+            case 2:
+                chi = "Tuất";
+                break;
+            case 3:
+                chi = "Hợi";
+                break;
+            case 4:
+                chi = "Tý";
+                break;
+            case 5:
+                chi = "Sửu";
+                break;
+            case 6:
+                chi = "Dần";
+                break;
+            case 7:
+                chi = "Mão";
+                break;
+            case 8:
+                chi = "Thìn";
+                break;
+            case 9:
+                chi = "Tỵ";
+                break;
+            case 10:
+                chi = "Ngọ";
+                break;
+            case 11:
+                chi = "Mùi";
+                break;
+
+        }
+        let lunar_year = can + " " + chi;
+
+        document.getElementById("result").innerHTML= "Tính theo Âm lịch là năm: " + lunar_year;
+    }
+</script>
+
+</html>

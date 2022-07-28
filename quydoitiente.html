@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Quy doi tien te</p>
+    <p>Nhap so tien:</p>
+    <input type="text" id="demo1">
+    <p>Chon dong tien dinh gia:</p>
+    <select name="" id="dinhgia">
+        <option value=0.000043>USD</option>
+        <option value=0.000042>EURO</option>
+        <option value=0.000036>POUND</option>
+        <option value=1>VND</option>
+    </select>
+    <p>Chon dong tien yet gia:</p>
+    <select name="" id="yetgia">
+        <option value=0.000043>USD</option>
+        <option value=0.000042>EURO</option>
+        <option value=0.000036>POUND</option>
+        <option value=1>VND</option>
+    </select>
+    <br>
+    <br>
+    <button onclick="fun_name()">Convert</button>
+    <br>
+    <p id="demo2">Tra ket qua: </p>
+</body>
+<script>
+    function fun_name() {
+        let x = +document.getElementById("demo1").value;
+
+        let y = +document.getElementById("dinhgia").value;
+        let z = +document.getElementById("yetgia").value;
+
+
+
+        let B = x * z / y;
+        document.getElementById("demo2").innerText = "Tra ket qua: " + B;
+    }
+</script>
+
+</html>

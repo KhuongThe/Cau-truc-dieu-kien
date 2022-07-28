@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Xem giá hoa quả:</p>
+    <input type="text" id="fruit">
+    <button onclick="price_fruit()">Xem giá</button>
+    <br>
+    <p id="kq">Giá:</p>
+</body>
+<script>
+
+    function price_fruit() {
+        let fruit = document.getElementById("fruit").value;
+        let price;
+        if (fruit == "ổi") {
+            price = "20.000 VNĐ/Kg";
+        }
+        else if (fruit == "dưa hấu") {
+            price = "30.000 VNĐ/Kg";
+        }
+        else if (fruit == "táo") {
+            price = "40.000 VNĐ/Kg";
+        }
+        else if (fruit == "xoài") {
+            price = "45.000 VNĐ/Kg";
+        }
+        document.getElementById("kq").innerText = "Giá: " + price;
+    }
+</script>
+
+</html>

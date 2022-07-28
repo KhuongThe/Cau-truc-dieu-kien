@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Tính chỉ số cân nặng theo Thang đo BMI</h2>
+    <p>Nhập chiều cao:</p>
+    <input type="text" id="high">
+    <p>Lưu ý: Nhập chiều cao theo đơn vị đo là mét. VD: chiều cao 1m75 thì nhập là: 1.75</p>
+    <p>Nhập cân nặng:</p>
+    <input type="text" id="weight">
+    <p>Lưu ý: Nhập cân nặng theo đơn vị đo là Kilogram. VD: cân nặng 65 Kilogram thì nhập là: 65</p>
+    
+    <br>
+    <button type="button" onclick="calculate()">Đánh giá</button>
+    <h3 id="result">Kết quả đánh giá</h3>
+</body>
+<script>
+    debugger;
+    function calculate(){
+        let high = +document.getElementById("high").value;
+        let weight = +document.getElementById("weight").value;
+        let bmi = weight / (high * high);
+        let evaluate;
+        if(bmi < 16){
+            evaluate = "Gầy độ III";
+            
+        }
+        else if(bmi < 17){
+            evaluate = "Gầy độ II";
+            
+        }
+        else if(bmi < 18.5){
+            evaluate = "Gầy độ I";
+            
+        }
+        else if(bmi < 25){
+            evaluate = "Bình thường";
+            
+        }
+        else if(bmi < 30){
+            evaluate = "Thừa cân";
+            
+        }
+        else if(bmi < 35){
+            evaluate = "Béo phì độ I";
+            
+        }
+        else if(bmi < 40){
+            evaluate = "Béo phì độ II";
+            
+        }
+        else {
+            evaluate = "Béo phì độ III";
+            
+        }
+        document.getElementById("result").innerText = "Kết quả đánh giá: " + evaluate;
+    }
+</script>
+</html>
